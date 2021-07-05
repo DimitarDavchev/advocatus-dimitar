@@ -314,12 +314,17 @@ a {
 }
 
 .three-dots span {
+  cursor: pointer;
   width: 10px;
   height: 10px;
   display: block;
   background-color: rgb(114, 114, 114);
   border-radius: 25px;
   margin-right: 1rem;
+}
+
+.active1 {
+  border: 2px solid #e8bf5d;
 }
 
 .recent-pub {
@@ -337,19 +342,21 @@ a {
   align-items: center;
 }
 
-.desc4 {
+.desc4,
+.desc5 {
   padding: 0.6rem;
   border-left: 2px solid #e8bf5d;
   width: 70%;
+  color: white;
 }
 
-.desc4 p {
+.smalldesc {
   padding-top: 2rem;
   font-weight: lighter;
   line-height: 1.3;
   font-size: 1.3rem;
 }
-.desc4 span {
+.titles {
   font-weight: 400;
   font-size: 2rem;
 }
@@ -400,6 +407,50 @@ a {
   border-top: 3px solid #e8bf5d;
   width: 100%;
   margin-top: 1rem;
+}
+
+.faq {
+  background-color: #111111;
+}
+
+.faqs {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 40% 60%;
+  height: 75vh;
+}
+
+.description5 {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.left-accordion {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.right-accordion {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.accordion-divs {
+  padding: 1rem;
+  border-bottom: 1px solid #e8bf5d;
+  color: white;
+}
+
+#plus-icon {
+  float: right;
+  cursor: pointer;
+}
+
+.active-accordion {
+  color: #e8bf5d;
 }
 
 .qualities {
