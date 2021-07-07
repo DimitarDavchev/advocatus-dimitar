@@ -2,6 +2,7 @@ const posts = document.querySelectorAll(".show");
 const dots = document.querySelectorAll('.buttons');
 const accordionDivs = document.querySelectorAll(".accordion-divs");
 const plusMinus = document.querySelectorAll("#plus-icon");
+const accordionP = document.querySelectorAll(".accordion-p");
 let currentSlide = 0;
 
 
@@ -35,20 +36,26 @@ setInterval(() => {
     })
   });
 
-function accord() {
 
-    accordionDivs.forEach((divs) => {
-        divs.classList.remove("active-accordion");
+function accord() {
+plusMinus.forEach((plus) => {
+  plus.addEventListener("click", (e) => {
+
+accordionP.forEach((para) => {
+        para.classList.remove("active-accordion");
     })
     plusMinus.forEach((plus) => {
-        plus.classList.remove("fa-plus");
+        plus.classList.remove("fa-minus");
+        plus.classList.add("fa-plus")
     });
-    this.target.classList.add("active-accordion");
+    e.target.previousSibling.classList.add("active-accordion");
+    e.target.classList.remove("fa-plus");
+    e.target.classList.add("fa-minus");
+    let parents = e.target.parentElement
+    parents.nextElementSibling.style.display = "block"
 
-
-
-
-
+  })
+})
 }
 
-plusMinus.addEventListener("click", accord());
+accord()

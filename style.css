@@ -442,15 +442,22 @@ a {
   padding: 1rem;
   border-bottom: 1px solid #e8bf5d;
   color: white;
+  display: flex;
+  justify-content: space-between;
 }
 
 #plus-icon {
   float: right;
   cursor: pointer;
+  color: white;
 }
 
 .active-accordion {
   color: #e8bf5d;
+}
+
+.right-accordion {
+  display: none;
 }
 
 .qualities {
