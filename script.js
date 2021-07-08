@@ -3,6 +3,13 @@ const dots = document.querySelectorAll('.buttons');
 const accordionDivs = document.querySelectorAll(".accordion-divs");
 const plusMinus = document.querySelectorAll("#plus-icon");
 const accordionP = document.querySelectorAll(".accordion-p");
+const firstAccordion = document.querySelector(".first-accordion");
+const secondAccordion = document.querySelector(".second-accordion");
+const thirdAccordion = document.querySelector(".third-accordion");
+const fourthAccordion = document.querySelector(".fourth-accordion");
+const fifthAccordion = document.querySelector(".fifth-accordion");
+const sixthAccordion = document.querySelector(".sixth-accordion");
+const allAccordions = document.querySelectorAll(".accordions")
 let currentSlide = 0;
 
 
@@ -41,6 +48,10 @@ function accord() {
 plusMinus.forEach((plus) => {
   plus.addEventListener("click", (e) => {
 
+    allAccordions.forEach((accor) => {
+      accor.style.display = "none"
+    })
+
 accordionP.forEach((para) => {
         para.classList.remove("active-accordion");
     })
@@ -48,11 +59,23 @@ accordionP.forEach((para) => {
         plus.classList.remove("fa-minus");
         plus.classList.add("fa-plus")
     });
-    e.target.previousSibling.classList.add("active-accordion");
+    e.target.previousElementSibling.classList.add("active-accordion");
     e.target.classList.remove("fa-plus");
     e.target.classList.add("fa-minus");
-    let parents = e.target.parentElement
-    parents.nextElementSibling.style.display = "block"
+
+    if(plus.previousElementSibling.innerHTML.includes("What1")) {
+      firstAccordion.style.display = "flex";
+    } else if(plus.previousElementSibling.innerHTML.includes("What2")) {
+      secondAccordion.style.display = "flex";
+    } else if(plus.previousElementSibling.innerHTML.includes("What3")) {
+      thirdAccordion.style.display = "flex";
+    } else if(plus.previousElementSibling.innerHTML.includes("What4")) {
+      fourthAccordion.style.display = "flex";
+    } else if(plus.previousElementSibling.innerHTML.includes("What5")) {
+      fifthAccordion.style.display = "flex";
+    } else if(plus.previousElementSibling.innerHTML.includes("What6")) {
+      sixthAccordion.style.display = "flex";
+    }
 
   })
 })
