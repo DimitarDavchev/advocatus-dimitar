@@ -9,7 +9,8 @@ const thirdAccordion = document.querySelector(".third-accordion");
 const fourthAccordion = document.querySelector(".fourth-accordion");
 const fifthAccordion = document.querySelector(".fifth-accordion");
 const sixthAccordion = document.querySelector(".sixth-accordion");
-const allAccordions = document.querySelectorAll(".accordions")
+const allAccordions = document.querySelectorAll(".accordions");
+const fixedNavbar = document.querySelector(".fixed-navbar")
 let currentSlide = 0;
 
 
@@ -81,4 +82,18 @@ accordionP.forEach((para) => {
 })
 }
 
-accord()
+accord();
+
+function scrollNavbar () {
+  if(scrollY >= 265) {
+    fixedNavbar.style.display = "flex";
+
+  } else {
+    fixedNavbar.style.display = "none";
+  }
+
+}
+
+window.addEventListener("scroll", scrollNavbar);
+
+//makethem activated bro//
