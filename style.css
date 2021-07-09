@@ -291,6 +291,9 @@ a {
 
 .client-imge {
   width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .three-dots {
@@ -499,7 +502,7 @@ a {
 }
 
 .contact {
-  background-color: #f4e2b5;
+  background-color: white;
 }
 
 .contacts {
