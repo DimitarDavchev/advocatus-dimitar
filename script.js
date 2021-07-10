@@ -10,7 +10,8 @@ const fourthAccordion = document.querySelector(".fourth-accordion");
 const fifthAccordion = document.querySelector(".fifth-accordion");
 const sixthAccordion = document.querySelector(".sixth-accordion");
 const allAccordions = document.querySelectorAll(".accordions");
-const fixedNavbar = document.querySelector(".fixed-navbar")
+const fixedNavbar = document.querySelector(".fixed-navbar");
+const scrolls = document.querySelectorAll(".scrolls");
 let currentSlide = 0;
 
 
@@ -97,3 +98,13 @@ function scrollNavbar () {
 window.addEventListener("scroll", scrollNavbar);
 
 //makethem activated bro//
+
+function scrollDown(){
+  scrolls.forEach((scroll) => {
+    if(scroll.textContent == "ABOUT") {
+      window.scrollTo(0, 792)
+    }
+  })
+}
+  
+
