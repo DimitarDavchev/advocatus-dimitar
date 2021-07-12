@@ -97,14 +97,44 @@ function scrollNavbar () {
 
 window.addEventListener("scroll", scrollNavbar);
 
-//makethem activated bro//
+function hoverOnScroll () {
 
-function scrollDown(){
+  const about = document.querySelector("#about");
+  const practice = document.querySelector("#practice");
+  const lawyers = document.querySelector("#lawyers");
+  const publications = document.querySelector("#publications");
+  const faq = document.querySelector("#faq");
+  const contact = document.querySelector("#contact");
+
   scrolls.forEach((scroll) => {
-    if(scroll.textContent == "ABOUT") {
-      window.scrollTo(0, 792)
+
+    if(scrollY < 794) {
+        scroll.classList.remove("scrolled")
+    }else if(scrollY >= 794 && scrollY <= 1430){
+        scroll.classList.remove("scrolled") 
+      about.classList.add("scrolled");
+  
+    } else if(scrollY >= 1430 && scrollY <= 2226){
+      scroll.classList.remove("scrolled");
+      practice.classList.add("scrolled");
+    } else if(scrollY >= 2226 && scrollY <= 3581){
+      scroll.classList.remove("scrolled");
+      lawyers.classList.add("scrolled");
+    } else if(scrollY >= 3581 && scrollY <= 4481){
+      scroll.classList.remove("scrolled");
+      publications.classList.add("scrolled");
+    } else if(scrollY >= 4481 && scrollY <= 5171){
+      scroll.classList.remove("scrolled");
+      faq.classList.add("scrolled");
+    } else if(scrollY >= 5171 && scrollY <= 5286){
+      scroll.classList.remove("scrolled");
+      contact.classList.add("scrolled");
     }
+
   })
 }
-  
+
+window.addEventListener("scroll", hoverOnScroll)
+
+
 

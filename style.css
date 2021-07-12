@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Playfair Display", sans-serif;
   color: #111111;
@@ -11,7 +15,21 @@ body {
   transition: all 0.2s;
   border-bottom: solid 6px #e8bf5d;
   padding-bottom: 0.4rem;
+  cursor: pointer;
 }
+
+.fixed-navbar a:hover {
+  transition: all 0.2s;
+  border-bottom: solid 6px #e8bf5d;
+  padding-bottom: 0.4rem;
+}
+
+.scrolled {
+  transition: all 0.2s;
+  border-bottom: solid 6px #e8bf5d;
+  padding-bottom: 0.4rem;
+}
+
 .container {
   max-width: 1320px;
   width: 100%;
