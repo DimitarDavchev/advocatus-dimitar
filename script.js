@@ -85,17 +85,6 @@ accordionP.forEach((para) => {
 
 accord();
 
-function scrollNavbar () {
-  if(scrollY >= 265) {
-    fixedNavbar.style.display = "flex";
-
-  } else {
-    fixedNavbar.style.display = "none";
-  }
-
-}
-
-window.addEventListener("scroll", scrollNavbar);
 
 function hoverOnScroll () {
 
@@ -133,8 +122,24 @@ function hoverOnScroll () {
 
   })
 }
+const headerBack = document.querySelector(".header-background")
+window.addEventListener("scroll", hoverOnScroll);
 
-window.addEventListener("scroll", hoverOnScroll)
+window.addEventListener("scroll", ()=>{
+  if(scrollY > 270) {
+    headerBack.classList.add("fixed-navbar")
 
+  }else{
+    headerBack.classList.remove("fixed-navbar")
+  }
+})
+
+
+const svg = document.querySelector(".svg");
+const collapseMenu = document.querySelector(".collapse-div")
+
+svg.addEventListener("click", ()=>{
+  collapseMenu.classList.toggle("click-menu")
+})
 
 

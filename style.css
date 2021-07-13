@@ -10,6 +10,13 @@ body {
   font-family: "Playfair Display", sans-serif;
   color: #111111;
 }
+
+.svg {
+  width: 20px;
+  height: 20px;
+  display: none;
+}
+
 .activated,
 .navbar a:hover {
   transition: all 0.2s;
@@ -22,6 +29,11 @@ body {
   transition: all 0.2s;
   border-bottom: solid 6px #e8bf5d;
   padding-bottom: 0.4rem;
+}
+
+.navbar2 a:hover {
+  transition: all 0.2s;
+  color: rgb(114, 114, 114);
 }
 
 .scrolled {
@@ -43,15 +55,6 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 10vh;
-  flex-direction: column;
-}
-
-.header2 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 10vh;
-  width: 100%;
 }
 
 .fixed-navbar {
@@ -60,16 +63,25 @@ body {
   right: 0;
   left: 0;
   background-color: white;
-  display: none;
+
   transition: all 0.2s;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
+  width: 50%;
+  font-family: "Open Sans", sans-serif;
+}
+
+.navbar2 {
+  display: flex;
+  justify-content: space-around;
   flex-direction: column;
   width: 50%;
   font-family: "Open Sans", sans-serif;
+  height: 20vh;
+  padding: 1rem 0 1rem 0;
 }
 
 a {
@@ -744,4 +756,21 @@ a {
   color: rgb(161, 161, 161);
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
+}
+
+.click-menu {
+  display: none;
+}
+
+.clicked {
+  display: block;
+}
+
+@media (max-width: 1143px) {
+  .navbar {
+    display: none;
+  }
+  .svg {
+    display: block;
+  }
 }
