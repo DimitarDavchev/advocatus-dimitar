@@ -43,6 +43,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 10vh;
+  flex-direction: column;
 }
 
 .header2 {
@@ -66,6 +67,7 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   width: 50%;
   font-family: "Open Sans", sans-serif;
 }
