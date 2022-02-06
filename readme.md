@@ -1,7 +1,7 @@
 # Advocatus
 
-> Advocatus is an attempted imitation of a mock website with HTML CSS and Javascript
-![](mockwebsite.jpeg)
+> Advocatus is an attempted imitation of a mock website with HTML CSS and a little bit of Javascript
+> View the project [here](https://symu.co/image/pngzkppjprx/1440/10000/fit/original/95/jpg/)
 
 ## Table of contents
 
@@ -17,10 +17,10 @@
 
 ### Features
 
-- [x] Dynamically rendered grid scaling based on setting
-- [x] Drawing with mousover on the grid cells
-- [x] Change the color with which you draw with
-- [x] Reset the sketch to the original state
+- [x] Able to scroll into view all slides
+- [x] Integrated carousel
+- [x] Integrated accordion
+
 
 
 ### Screenshot
@@ -42,7 +42,8 @@
 - Desktop-first workflow
 - Javascript
 
-## Author
+## Authors
 
+- Website - [Dimitar Davcev](https://github.com/DimitarDavchev)
 - Website - [Mario Boykovski](https://github.com/funkosaur)
  
