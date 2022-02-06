@@ -2,7 +2,7 @@
 
 > Advocatus is an attempted imitation of a mock website with HTML CSS and a little bit of Javascript
 
-> View the project [here](https://symu.co/image/pngzkppjprx/1440/10000/fit/original/95/jpg/)
+> View the mock website [here](https://symu.co/image/pngzkppjprx/1440/10000/fit/original/95/jpg/)
 
 ## Table of contents
 
